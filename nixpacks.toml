@@ -1,12 +1,20 @@
 [phases.setup]
-aptPkgs = [
-  "libgl1",
-  "libglib2.0-0",
-  "libsm6",
-  "libxrender1",
-  "libxext6",
-  "libxcb1"
+nixPkgs = [
+  "python3",
+  "gcc",
+  "libglvnd",
+  "glib",
+  "libx11",
+  "libxcb",
+  "libxext",
+  "libsm",
+  "libice"
 ]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = [
+  "pip install -r requirements.txt"
+]
+
+[start]
+cmd = "uvicorn main:app --host 0.0.0.0 --port $PORT"
