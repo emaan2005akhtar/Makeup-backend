@@ -1,14 +1,14 @@
 [phases.setup]
-nixPkgs = [
-  "python3",
-  "gcc",
-  "glib",
-  "libx11",
-  "libxcb",
-  "libxext",
-  "libsm",
-  "libice",
-  "libglvnd"
+aptPkgs = [
+  "libgl1",
+  "libglib2.0-0",
+  "libsm6",
+  "libxext6",
+  "libxrender1",
+  "libx11-6",
+  "libxcb1",
+  "libgtk2.0-0",
+  "libgtk-3-0"
 ]
 
 [phases.install]
