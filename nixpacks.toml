@@ -2,13 +2,13 @@
 nixPkgs = [
   "python3",
   "gcc",
-  "libglvnd",
   "glib",
   "libx11",
   "libxcb",
   "libxext",
   "libsm",
-  "libice"
+  "libice",
+  "libglvnd"
 ]
 
 [phases.install]
